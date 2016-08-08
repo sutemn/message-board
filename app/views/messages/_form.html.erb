@@ -12,10 +12,17 @@
     </div>
   <% end %>
 
+<div class="row">
+  <div class="col-xs-2">
   名前:
-  <%= f.text_field :name %>
-
+  
+  <%= f.text_field :name, class: "form-control", placeholder: "名前" %>
+  </div>
+  <div class="col-xs-3">
   内容:
-  <%= f.text_field :body %>
-  <%= f.submit class: "btn btn-sm btn-primary" %>
+      <%= f.text_area :body, rows: "3", class: "form-control", placeholder: "内容", id: "disabledTextInput" %>
+  </div>
+  <br>
+  <%= f.submit class: "btn btn-lg btn-success" %>
+</div>
 <% end %>
