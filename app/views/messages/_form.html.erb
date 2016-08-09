@@ -11,18 +11,19 @@
       </ul>
     </div>
   <% end %>
-
-<div class="row">
-  <div class="col-xs-2">
-  名前:
   
-  <%= f.text_field :name, class: "form-control", placeholder: "名前" %>
+<form class="form-horizontal">
+  <div class="form-group">
+  <div class="col-xs-2">
+  <label for="inputName">名前:</label>
+    <%= f.text_field :name, class: "form-control", placeholder: "名前", id: "inputName" %>
   </div>
   <div class="col-xs-3">
-  内容:
-      <%= f.text_area :body, rows: "3", class: "form-control", placeholder: "内容", id: "disabledTextInput" %>
+  <label for="inputContent">内容:</label>
+      <%= f.text_area :body, rows: "3", class: "form-control", placeholder: "内容", id: "inputContent" %>
   </div>
   <br>
   <%= f.submit class: "btn btn-lg btn-success" %>
-</div>
+  </div>
+</form>
 <% end %>
